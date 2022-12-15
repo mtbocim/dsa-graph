@@ -131,20 +131,20 @@ class Graph {
       //    }
       // }
 
-   //    let queue = [[start, 0]];
+      let queue = [[start, 0]];
 
-   //    while(queue.length) {
-   //       let [currentVertex, distance] = queue.shift();
+      while(queue.length) {
+         let [currentVertex, distance] = queue.shift();
 
-   //       if(currentVertex === end) return distance;
+         if(currentVertex === end) return distance;
 
-   //       for(let node of currentVertex.adjacent) {
-   //          if(!visited.has(node)) {
-   //             visited.add(node);
-   //             queue.push([node, distance + 1]);
-   //          }
-   //       }
-   //    }
+         for(let node of currentVertex.adjacent) {
+            if(!visited.has(node)) {
+               visited.add(node);
+               queue.push([node, distance + 1]);
+            }
+         }
+      }
     }
 }
 
